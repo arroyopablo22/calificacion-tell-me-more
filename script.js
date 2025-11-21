@@ -16,7 +16,8 @@ function procesarDatos() {
 <tr>
     <th>Nombre</th>
     <th>Nota</th>
-    <th>% Realizado Correctamente</th>
+    <th>% Realizado </th>
+    <th>% Correctamente</th>
 </tr>
 `;
 
@@ -24,12 +25,13 @@ function procesarDatos() {
         if (!linea.includes(";")) return;
 
         const [nombre, modo, orientacion, tiempo_dedicado, porcentaje_realizado, procentaje_correcto] = linea.split(";").map(v => v.trim());
-        const nota = calcularNota(procentaje_correcto);
+        const nota = calcularNota(porcentaje_realizado);
 
         tabla += `
     <tr>
         <td>${nombre}</td>
         <td>${nota}</td>
+        <td>${porcentaje_realizado}%</td>
         <td>${procentaje_correcto}%</td>
     </tr>
 `;
