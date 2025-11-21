@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Notas - Inglés</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h2>Calculadora de Notas por Porcentaje</h2>
+
+    <p><strong>Formato de entrada:</strong> un valor por línea → <em>Nombre,Porcentaje</em></p>
+    <p>Ejemplo:<br>Juan,92<br>María,76<br>Carlos,88</p>
+
+    <textarea id="inputData" placeholder="Escribe aquí la lista de estudiantes y porcentajes..."></textarea>
+
+    <button onclick="procesarDatos()">Generar Tabla</button>
+
+    <table id="tablaResultados"></table>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
