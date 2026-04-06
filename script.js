@@ -1,10 +1,10 @@
 function calcularNota(porcentaje) {
     porcentaje = Number(porcentaje);
 
-    if (porcentaje < 80) return 1.0;
-    if (porcentaje <= 84) return 2.0;
-    if (porcentaje <= 89) return 3.0;
-    if (porcentaje <= 94) return 4.0;
+    if (porcentaje < 5) return 1.0;
+    if (porcentaje <= 10) return 2.0;
+    if (porcentaje <= 15) return 3.0;
+    if (porcentaje <= 20) return 4.0;
     return 5.0; // 95 - 100
 }
 
