@@ -57,10 +57,10 @@ function calcularNota(porcentajeCorrecto) {
 
 function obtenerClaseNota(nota) {
     switch (nota) {
-        case 1.0: return "nota-1";
-        case 2.0: return "nota-2";
-        case 3.0: return "nota-3";
-        case 4.0: return "nota-4";
+        case nota > 1.0 && nota < 2.0: return "nota-1";
+        case nota >= 2.0 && nota < 3.0: return "nota-2";
+        case nota >= 3.0 && nota < 4.0: return "nota-3";
+        case nota >= 4.0 && nota < 4.5: return "nota-4";
         case 5.0: return "nota-5";
         default: return "";
     }
