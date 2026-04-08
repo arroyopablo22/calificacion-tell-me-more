@@ -8,20 +8,42 @@
 </head>
 
 <body>
+    <div class="container">
+        <h1>Evaluación de Avance en Inglés por Grado</h1>
+        <p>
+            Esta aplicación filtra automáticamente los registros según el <strong>grado seleccionado</strong>
+            y el <strong>nivel de inglés correspondiente</strong>.
+        </p>
 
-    <h2>Calculadora de Notas por Porcentaje</h2>
+        <label for="grado">Selecciona el grado:</label>
+        <select id="grado" onchange="mostrarNivel()">
+            <option value="">-- Selecciona un grado --</option>
+            <option value="6">Sexto</option>
+            <option value="7">Séptimo</option>
+            <option value="8">Octavo</option>
+            <option value="9">Noveno</option>
+            <option value="10">Décimo</option>
+            <option value="11">Undécimo</option>
+        </select>
 
-    <p><strong>Formato de entrada:</strong> un valor por línea → <em>Nombre,Porcentaje</em></p>
-    <p>Ejemplo:<br>Juan,92<br>María,76<br>Carlos,88</p>
+        <div class="info-box" id="nivelInfo">
+            Selecciona un grado para ver el nivel de inglés correspondiente.
+        </div>
 
-    <textarea id="inputData" placeholder="Escribe aquí la lista de estudiantes y porcentajes..."></textarea>
+        <label for="datos">Pega aquí los datos del reporte:</label>
+        <textarea id="datos" placeholder="Pega aquí el reporte completo..."></textarea>
 
-    <button onclick="procesarDatos()">Generar Tabla</button>
+        <button onclick="procesarDatos()">Procesar y Mostrar Resultados</button>
 
-    <table id="tablaResultados"></table>
+        <div id="mensaje"></div>
+        <div class="resumen" id="resumen" style="display:none;"></div>
+
+        <div class="table-container">
+            <table id="tablaResultados"></table>
+        </div>
+    </div>
 
     <script src="script.js"></script>
-
 </body>
 
 </html>
