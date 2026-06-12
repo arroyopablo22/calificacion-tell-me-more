@@ -49,7 +49,7 @@ function calcularNota(porcentajeCorrecto) {
 
     if (isNaN(p)) return "N/A";
     if (p < 25) return 1.0;
-    if (p >= 25 && p <= 50) return Number((1 + ((porcentaje - 25) * 0.16)).toFixed(1));
+    if (p >= 25 && p <= 50) return (1 + ((porcentaje - 25) * 0.16)).toFixed(1);
     if (p > 50 && p <= 100) return 5.0;
 
     return "N/A";
