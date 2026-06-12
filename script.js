@@ -48,9 +48,9 @@ function calcularNota(porcentajeCorrecto) {
     const p = parseFloat(porcentajeCorrecto);
 
     if (isNaN(p)) return "N/A";
-    if (p < 5) return 1.0;
-    if (p >= 5 && p <= 25) return p*0.2;
-    if (p > 25 && p <= 100) return 5.0;
+    if (p < 25) return 1.0;
+    if (p >= 25 && p <= 50) return Number((1 + ((porcentaje - 25) * 0.16)).toFixed(1));
+    if (p > 50 && p <= 100) return 5.0;
 
     return "N/A";
 }
